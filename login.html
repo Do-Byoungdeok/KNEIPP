@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/login.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/login.js"></script>
+</head>
+<body>
+    <header>
+        <div class="wide_inner_box">
+            <h1 class="logo">
+                <a href="index.html"><img src="img/icon_logo.png" alt="로고"></a>
+            </h1>
+            <ul class="gnb">
+                <li><a href="login.html"><img src="img/icon_user.png" alt="로그인"></a></li>
+                <li><a href="#void"><img src="img/icon_mypage.png" alt="마이페이지"></a></li>
+            </ul> 
+            <nav>
+                <h2 class="blind">메인메뉴</h2>
+                <ul id="nav">
+                    <li>
+                        <a href="#void">BRAND</a>
+                        <ul class="sub">
+                            <li><a href="#void">소개</a></li>
+                            <li><a href="#void">오시는길</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#void">STORY</a>
+                    </li>
+                    <li>
+                        <a href="#void">EVENT</a>
+                        <ul class="sub">
+                            <li><a href="#void">공지사항</a></li>
+                            <li><a href="#void">이벤트</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#void">SHOP</a>
+                        <ul class="sub">
+                            <li>
+                                <a href="#void">NEW</a>
+                                <a href="#void">BEST</a>
+                                <a href="#void">제품</a>
+                                <ul class="sSub">
+                                    <li><a href="#void">솔트</a></li>
+                                    <li><a href="#void">스크럼</a></li>
+                                    <li><a href="#void">워시</a></li>
+                                    <li><a href="#void">로션</a></li>
+                                    <li><a href="#void">오일</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="m_nav"> <!-- 모바일 메뉴-->
+                <h2 class="blind">메인메뉴</h2>
+                <div class="m_join">
+                    <p>로그인이 필요합니다.</p>
+                    <ul class="m_joinBox">
+                        <li class=""><a href="login.html">로그인</a></li>
+                        <li><a href="#void">회원가입</a></li>
+                    </ul>
+                </div>
+                <ul id="m_nav">
+                    <li>
+                        <a href="#void">BRAND</a>
+                        <ul class="m_sub">
+                            <li><a href="#void">소개</a></li>
+                            <li><a href="#void">오시는길</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#void">STORY</a>
+                    </li>
+                    <li>
+                        <a href="#void">EVENT</a>
+                        <ul class="m_sub">
+                            <li><a href="#void">공지사항</a></li>
+                            <li><a href="#void">이벤트</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#void">SHOP</a>
+                        <ul class="m_sub">
+                            <li>
+                                <a href="#void">NEW</a>
+                                <a href="#void">BEST</a>
+                                <a href="#void">제품</a>
+                                <ul class="m_sSub">
+                                    <li><a href="#void">솔트</a></li>
+                                    <li><a href="#void">스크럼</a></li>
+                                    <li><a href="#void">워시</a></li>
+                                    <li><a href="#void">로션</a></li>
+                                    <li><a href="#void">오일</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <p class="hamBtn">
+                <a href="#void"></a>
+            </p>
+        </div>
+    </header>
+    <section class="login-form">
+        <div class="login-wrap">
+            <div class="login-box">
+                <h1>LOGIN</h1>
+                <form action="">
+                    <div class="int-area">
+                        <input type="text" name="id" id="id" autocomplete="off" required>
+                        <label for="id">ID</label>
+                    </div>
+                    <div class="int-area">
+                        <input type="password" name="pw" id="pw" autocomplete="off" required>
+                        <label for="pw">PASSWORD</label>
+                    </div>
+                    <div class="toggleWrap">
+                        <input type="checkbox" id="switch" class="checkbox" />
+                        <label for="switch" class="toggle"><p>아이디 저장</p></label>
+                    </div>
+                    <div class="btn-area">
+                        <button  id="btn" type="submit">LOGIN</button>
+                    </div>
+                </form>
+                <div class="caption">
+                    <a href="#">아이디 찾기</a>
+                    <a href="#">비밀번호 찾기</a>
+                    <a href="#">회원가입</a>
+                </div>
+            </div>
+            <div class="snsLogin">
+                <p class="snsText">SNS 로그인</p>
+                <ul class="snsList">
+                    <li><a href="#void"><img src="img/sns_icon_facebook.jpg" alt="페이스북"></a></li>
+                    <li><a href="#void"><img src="img/sns_icon_naver.jpg" alt="네이버"></a></li>
+                    <li><a href="#void"><img src="img/sns_icon_kakao.jpg" alt="카카오"></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

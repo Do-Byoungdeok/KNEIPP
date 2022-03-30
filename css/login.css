@@ -1,0 +1,550 @@
+/* font */
+@font-face {
+    font-family: "NotoSansKR";
+    font-weight: 900;
+    src:url(../font/NotoSansKR-Bold.woff) format("woff");
+}
+@font-face {
+    font-family: "NotoSansKR";
+    font-weight: 500;
+    src:url(../font/NotoSansKR-Medium.woff) format("woff");
+}
+@font-face {
+    font-family: "NotoSansKR";
+    font-weight: 400;
+    src:url(../font/NotoSansKR-Regular.woff) format("woff");
+}
+@font-face {
+    font-family: "NotoSansKR";
+    font-weight: 100;
+    src: url(../font/NotoSansKR-Thin.woff) format("woff");
+}
+
+
+/* 공통사항 */
+/* ---------------------------------- */
+html, body {
+    font-family: "NotoSansKR";
+    overflow-x:hidden;
+    height: 100%;
+}
+.m_best_wrap {
+    display: none;
+}
+.m_new_wrap {
+    display: none;
+}
+#m_nav {
+    display: none;
+}
+.m_join {
+    display: none;
+}
+
+strong {
+    font-weight: 900;
+}
+
+.wide_inner_box {
+    max-width: 1920px;
+    padding: 0 50px;
+    margin: 0 auto;
+    _background-color: rgba(255, 0, 0, 0.1);
+}
+.inner_box {
+    max-width: 1260px;
+    padding: 0 50px;
+    margin: 0 auto;
+    _background-color: rgba(0, 255, 0, 0.1);
+}
+
+
+
+/* header */
+/* ---------------------------------- */
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.7);
+}
+header a:hover {
+    color: #025253;
+}
+header::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 0;
+    background: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    transition: 0.3s;
+}
+header:hover::after {
+    height: 230px;
+}
+
+
+
+header:hover .sub {
+    height: 230px;
+    display: block;
+    height: 230px;
+    opacity: 1;
+}
+
+.logo {
+    float: left;
+    margin-top: 17px;
+}
+
+
+
+.gnb {
+    float: right;
+    margin-top: 30px;
+}
+.gnb>li {
+    float: left;
+    margin-left: 20px;
+}
+
+
+
+/* header nav*/
+/* ---------------------------------- */
+nav {
+    text-align: center;
+}
+#nav>li {
+    display: inline-block;
+    position: relative;
+}
+#nav>li>a {
+    display: block;
+    font-size: 17px;
+    padding: 0 38px;
+    line-height: 88px;
+    font-weight: 900;
+    font-size: 20px;
+}
+#nav>li>a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 48%;
+    top: 70%;
+    width: 0;
+    height: 2px;
+    background: #025253;
+    transform: translateX(-50%);
+    transition: 0.3s;
+    z-index: 100;
+}
+#nav>li>a:hover::after{
+    width: 50%;
+}
+
+.sub {
+    display: block;
+    position: absolute;
+    width: 100%;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 30px;
+    z-index: 100;
+    height: 0;
+    transition: 0.3s;
+    opacity: 0;
+}
+.sub a {
+    padding: 10px 35px;
+    margin-left: -10px;
+}
+.sub a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 48%;
+    width: 0;
+    height: 2px;
+    background: #025253;
+    transform: translateX(-50%);
+    transition: 0.3s;
+}
+.sub a:hover::after{
+    width: 50%;
+}
+
+
+
+.sSub {
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 80px;
+}
+
+
+
+/* login */
+/* ---------------------------------- */
+* {
+    box-sizing: border-box;
+}
+.login-form {
+    float: left;
+    width: 100%;
+    height: 100%;
+    background: url(../img/main_banner01.jpg) no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+.login-wrap{
+    width:400px;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    z-index: 100;
+}
+.login-form::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    
+}
+.login-box {
+    position: relative;
+    z-index: 2;
+}
+.login-box h1 {
+    font-size: 32px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.int-area {
+    width: 400px;
+    position: relative;
+    margin-top: 20px;
+}
+.int-area input {
+    width: 100%;
+    padding: 20px 10px 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #999;
+    font-size: 18px;
+    color: #fff;
+    outline: none;
+}
+.int-area label {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    font-size: 18px;
+    color: #999;
+    transition: top 0.5s ease;
+}
+.int-area label.warning {
+    color: red !important;
+    animation: warning 0.3s ease;
+    animation-iteration-count: 3;
+}
+
+@keyframes warning {
+    0% {transform: translateX(-8px);}
+    25% {transform: translateX(8px);}
+    50% {transform: translateX(-8px);}
+    75% {transform: translateX(8px);}
+}
+.int-area input:focus + label,
+.int-area input:valid + label {
+    top: 0;
+    font-size: 13px;
+    color: #166cea;
+}
+
+.btn-area {
+    margin-top: 60px;
+}
+.btn-area button {
+    width: 100%;
+    height: 50px;
+    background: #999;
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.caption {
+    margin-top: 10px;
+    text-align: center;
+}
+.caption a {
+    font-size: 18px;
+    color: #ccc;
+    text-align: center;
+    padding: 0 10px 0;
+}
+
+
+/* 아이디 저장 */
+/* ------------------------------------- */
+.toggleWrap{
+    position: relative;
+}
+.toggle {
+    position : relative ;
+    display : inline-block;
+    width : 70px;
+    height : 27px;
+    background-color: rgb(109, 109, 109);
+    border-radius: 30px;
+    left: 40%;
+    top: 20px;
+}
+.toggle:after {
+    content: '';
+    position: absolute;
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    background-color: #fff;
+    top: 0; 
+    left: 0;
+    transition:  all 0.5s;
+}
+.toggle>p {
+    color: #fff;
+    width: 168px;
+    margin-left: -200%;
+    font-size: 17px;
+}
+.checkbox:checked + .toggle::after {
+    left : 60%; 
+}
+.checkbox:checked + .toggle {
+    background-color: #166cea;
+}
+.checkbox { 
+    display : none;
+}
+
+
+/* login sns */
+/* ---------------------------------- */
+.snsLogin {
+    margin-top: 25px;
+}
+
+.snsLogin .snsText {
+    font-size: 20px;
+    text-align: center;
+    color: rgb(188, 188, 188);
+}
+.snsLogin .snsList {
+    width: 100%;
+    margin-left: 50px;
+}
+.snsLogin .snsList li {
+    float: left;
+    margin: 20px;
+}
+.snsLogin .snsList li img {
+    width: 60px;
+}
+
+
+@media all and (max-width:767px) {
+    /* header */
+    /* -------------------------------------- */
+    header {
+        height: 60px;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.7);
+    }
+    header:hover::after {
+        height: 0;
+    }
+    /* 로고 */
+    /* -------------------------------------- */
+    .logo {
+        margin: 6px -40px;
+    }
+    .logo>a>img {
+        width: 120px;
+        height: 50px;
+    }
+    
+    /* 메뉴 */
+    /* -------------------------------------- */
+    #nav {
+        display: none;
+    }
+    .m_join {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+    }
+    .m_join>p {
+        color: #000;
+        font-weight: 900;
+        margin-right: 12vw;
+        font-size: 3.9vw;
+    }
+    .m_joinBox {
+        margin-left: 3vw;
+        margin-top: 5vw;
+    }
+    .m_joinBox>li {
+        float: left;
+        width: 24vw;
+        background: rgba(255, 255, 255, 0.7);
+    }
+    .m_joinBox>li a {
+        color: rgb(37, 37, 37);
+        font-weight: 700;
+    }
+    .m_joinBox>li:last-child {
+        border-left: 1px solid rgb(37, 37, 37);
+    }
+    .m_nav {
+        width: 55vw;
+        height: 100%;
+        position: fixed;
+        right: -100%;
+        transition: 1s;
+        background: #025253;
+    }
+    #m_nav {
+        display: block;
+        width: 100%;
+        height: 100%;
+        margin-top: 20vw;
+    }
+    #m_nav>li {
+        width: 48.5vw;
+        line-height: 10vw;
+        background: rgba(255, 255, 255, 0.7);
+        margin-left: 3vw;
+        margin-top: 2vw;
+    }
+    #m_nav>li>a {
+        display: block;
+        color: #000;
+        text-indent: -2px;
+        background-image: url(../img/arrow_down.png);
+        background-repeat: no-repeat;
+        background-position: 95% center;
+        font-size: 3vw;
+    }
+    #m_nav>li:nth-child(2)>a {
+        background-image: none;
+    } 
+    #m_nav>li.navActive>a{
+        background-image: url(../img/arrow_up.png);
+    }
+    .m_sub {
+        background: #0252534a;
+        display: none;
+    }
+    .m_sub>li>a {
+        display: block;
+        font-size: 3vw;
+    }
+    .m_sSub {
+        display: none;
+    }
+
+    .hamBtn {
+        position: absolute;
+        right: 4vw;
+        top: 3vw;
+    }
+    .hamBtn>a {
+        display: block;
+        width: 32px; 
+        height: 32px;
+        background-image: url(../img/icon_menu.png);
+    }
+    .hamBtn>a.navActive {
+        background-image: url(../img/m_x_icon.png);
+    }
+
+    /* 메뉴 아이콘 */
+    /* -------------------------------------- */
+    .gnb {
+        display: none;
+    }
+
+
+
+    /* login */
+    /* -------------------------------------- */
+    .login-form {
+        min-height: 660px;
+    }
+    .login-wrap{
+        width:290px;
+    }
+    .login-form::before {
+        height: 100%;
+        width: 100%;
+    }
+    .int-area {
+        width: 285px;
+    }
+    
+    .btn-area {
+        margin-top: 45px;
+    }
+    .caption {
+        margin-top: 3px;
+    }
+    .caption a {
+        font-size: 15px;
+        padding: 0 3px 0;
+    }
+    
+
+    /* 아이디 저장 */
+    /* -------------------------------------- */
+    .toggle {
+        width : 50px;
+        height : 20px;
+        left: 40%;
+        top: 20px;
+    }
+    .toggle:after {
+        width: 20px;
+        height: 20px;
+    }
+    .toggle>p {
+        color: #fff;
+        width: 75px;
+        margin-left: -160%;
+        font-size: 13px;
+    }
+    
+    /* login sns */
+    /* ---------------------------------- */
+    .snsLogin .snsText {
+        font-size: 15px;
+    }
+    .snsLogin .snsList li {
+        margin: 10px;
+    }
+    .snsLogin .snsList li img {
+        width: 45px;
+    }
+}
